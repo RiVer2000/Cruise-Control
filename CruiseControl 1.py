@@ -19,6 +19,7 @@ F = m*a
 v = v(in) + a*t
 a = (u - m*g*sin(theta)-b*v)/m
 '''
+
 m = 1200							#Mass of the Vehicle
 v=0									#Current Velocity of the Vehicle
 Vel=[]								#Velocity Array to store values at different times
