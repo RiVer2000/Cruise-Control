@@ -12,6 +12,7 @@ slope
 
 import numpy as np
 import matplotlib.pyplot as plt
+import math
 
 '''
 The system is modelled using
@@ -19,7 +20,6 @@ F = m*a
 v = v(in) + a*t
 a = (u - m*g*sin(theta)-b*v)/m
 '''
-
 m = 1200							#Mass of the Vehicle
 v=0									#Current Velocity of the Vehicle
 Vel=[]								#Velocity Array to store values at different times
@@ -29,8 +29,10 @@ b = 50								#Constant for air drag
 r = 70								#Reference Velocity
 mu = 0.01							#Coefficient of Rolling friction
 g=9.81								#Gravity
+ms = 0.3							#Value of Slope
+sin = ms/(math.sqrt(1 + ms**2))		#Value of Sine of Inclination
 kp = 50								#Proportional gain constant
-ki = 8								#Integral gain constant
+ki = 7.5								#Integral gain constant
 kd = 19								#Differential gain constant
 
 
@@ -47,7 +49,7 @@ while t!= 50:
 	E = E + e
 	u = kp*e + kd*e_dot + ki*E
 	old_e = e
-	v = (m*v+u*t+mu*m*t*g)/(m+b*t)
+	v = (m*v+ u*t + mu*m*t*g - m*g*sin)/(m+b*t)
 	Vel.append(v)
 	t+=1
 print(Vel)							#Printing the velocities so as to get a better idea of them
