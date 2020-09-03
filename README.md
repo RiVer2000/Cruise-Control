@@ -17,7 +17,7 @@ car at the desired velocity.
 2. For an altered model the car was set to reach desired velocity which changed with respect to time
 [![solarized dualmode](https://github.com/RiVer2000/Cruise-Control/blob/master/Figure_1b.png)](#features)  
 #  Errors
-Maximum errors that arose in the model were due to inappropriate values of the PID coefficients    
+Maximum errors that arose in the model were due to inappropriate values of the PID coefficients(Kp, Kd, Ki)    
 1. If the value of Ki was taken too high then the system started oscillating which is undesireable  
 [![solarized dualmode](https://github.com/RiVer2000/Cruise-Control/blob/master/Error1.png)](#features)  
 2. Also we need sufficiently fast paced response thus Kd should be included as Kp alone cannot reach the 
