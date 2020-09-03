@@ -1,6 +1,6 @@
 # Cruise-Control
 # Aim  
-To Develop a Cruise Control for a car for a Fixed point velocity and then extended to Array of Velocities in Python.
+To Develop a Cruise Control for a car for a Fixed point velocity using PID controller and then extended to Array of Velocities in Python.
 # Motion Model  
 The model of the cruise control system is relatively simple. If the inertia of the wheels is neglected,
 and it is assumed that air drag (which is proportional to the car’s speed at low speeds) is what is
