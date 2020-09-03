@@ -23,3 +23,6 @@ Maximum errors that arose in the model were due to inappropriate values of the P
 2. Also we need sufficiently fast paced response thus Kd should be included as Kp alone cannot reach the 
 goal velocity  
 [![solarized dualmode](https://github.com/RiVer2000/Cruise-Control/blob/master/Error2.png)](#features)  
+3. The Ki parameter was especially important in regard. The car didn't reach even near the desired velocity 
+without the Integral gains.  
+[![solarized dualmode](https://github.com/RiVer2000/Cruise-Control/blob/master/Error3.png)](#features)  
