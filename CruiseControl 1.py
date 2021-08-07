@@ -18,7 +18,7 @@ import math
 The system is modelled using
 F = m*a
 v = v(in) + a*t
-a = (u - m*g*sin(theta)-b*v)/m
+a = (u - m*g*sin(theta) - mu*m*g*cos(theta) -b*v)/m
 '''
 m = 1200							#Mass of the Vehicle
 v=0									#Current Velocity of the Vehicle
@@ -49,7 +49,7 @@ while t!= 50:
 	E = E + e
 	u = kp*e + kd*e_dot + ki*E
 	old_e = e
-	v = (m*v+ u*t + mu*m*t*g - m*g*sin)/(m+b*t)
+	v = (m*v+ u*t + mu*m*t*g*cos - m*g*sin*t)/(m+b*t)
 	Vel.append(v)
 	t+=1
 print(Vel)							#Printing the velocities so as to get a better idea of them
