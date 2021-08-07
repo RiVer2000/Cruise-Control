@@ -20,20 +20,22 @@ F = m*a
 v = v(in) + a*t
 a = (u - m*g*sin(theta) - mu*m*g*cos(theta) -b*v)/m
 '''
-m = 1200							#Mass of the Vehicle
-v=0									#Current Velocity of the Vehicle
-Vel=[]								#Velocity Array to store values at different times
-t=0									#Current Time frame
+m = 1200				#Mass of the Vehicle
+v=0					#Current Velocity of the Vehicle
+Vel=[]					#Velocity Array to store values at different times
+t=0					#Current Time frame
 Time = [i for i in range(50)]  		#Time array to plot graph
-b = 50								#Constant for air drag
-r = 70								#Reference Velocity
-mu = 0.01							#Coefficient of Rolling friction
-g=9.81								#Gravity
-ms = 0.3							#Value of Slope
+b = 50					#Constant for air drag
+r = 70					#Reference Velocity
+mu = 0.01				#Coefficient of Rolling friction
+g=9.81					#Gravity
+ms = 0.3				#Value of Slope
 sin = ms/(math.sqrt(1 + ms**2))		#Value of Sine of Inclination
-kp = 50								#Proportional gain constant
-ki = 7.5								#Integral gain constant
-kd = 19								#Differential gain constant
+
+#Tuning parameters
+kp = 100				#Proportional gain constant
+ki = 18					#Integral gain constant
+kd = 50					#Differential gain constant
 
 
 #Predefining the Error terms
@@ -52,7 +54,7 @@ while t!= 50:
 	v = (m*v+ u*t + mu*m*t*g*cos - m*g*sin*t)/(m+b*t)
 	Vel.append(v)
 	t+=1
-print(Vel)							#Printing the velocities so as to get a better idea of them
+print(Vel)				#Printing the velocities so as to get a better idea of them
 
 #Plot the results obtained 
 
